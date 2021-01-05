@@ -1,7 +1,7 @@
 'use strict';
 var workingHour = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm'];
-function randomNumOfCustPerHour(numOne, numTwo) {
-    return Math.floor(Math.random() * (numOne - numTwo)) + numTwo;
+function randomNumOfCustPerHour(maxNum, minNum) {
+    return Math.floor(Math.random() * (maxNum - minNum+1)) + minNum;
 }
 
 var Seattle = {
@@ -69,8 +69,8 @@ function hourAndTotalCookie(city) {
     for (var i = 0; i < workingHour.length; i++) {
         var liList = document.createElement('li');
         ulList.appendChild(liList);
-        var rand = Math.floor(randomNumOfCustPerHour(city.maxCust, city.minCust) * city.avgCookieSale);
-        liList.textContent = workingHour[i] + ': ' + rand;
+        var random = Math.floor(randomNumOfCustPerHour(city.maxCust, city.minCust) * city.avgCookieSale);
+        liList.textContent = workingHour[i] + ': ' + random +' Cookies';
     }
 
 }
