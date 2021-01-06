@@ -21,25 +21,6 @@ var Paris = new AllCity('Paris', 20, 38, 2.4);
 
 var Lima = new AllCity('Lima', 2, 16, 4.6);
 
-
-
-// AllCity.prototype.table = function (city) {
-//     var rowArray = [Hour, Seattle, Tokyo, Paris, Dubai, Lima, Total];
-//     var par = document.getElementById('salmonCookies');
-//     var table = document.createElement('table');
-//     par.appendChild(table);
-//     for (var i = 0; i < rowArray.length; i++) {
-//         var tableRow = document.createElement('tr');
-//         table.appendChild(tableRow);
-//         tableRow.textContent = city.rowArray[i];
-//     }
-//     for (var index = 0; index<workingHour,length; index++) {
-//         var tableData = document.createElement('td');
-//         tableRow.appendChild(tableData);
-//         tableData.textContent = city.workingHour[index];
-//     }
-
-// }
 var par = document.getElementById('salmonCookies');
 var table = document.createElement('table');
 par.appendChild(table);
@@ -62,7 +43,6 @@ function tableHead() {
     }
 }
 tableHead();
-
 function fillArray(location) {
     for (var i = 0; i < workingHour.length; i++) {
         var rand = Math.floor(randomNumOfCustPerHour(location.maxCust, location.minCust) * location.avgCookieSale);
@@ -75,13 +55,11 @@ fillArray(Dubai);
 fillArray(Paris);
 fillArray(Lima);
 
-
 function cityRandNum(city) {
     tableRow = document.createElement('tr');
     tableBody.appendChild(tableRow);
     var tableData = document.createElement('td');
     var sum = 0;
-
     for (var index = 0; index < city.numCookies.length + 2; index++) {
         tableData = document.createElement('td');
         tableRow.appendChild(tableData);
@@ -98,12 +76,10 @@ function cityRandNum(city) {
         }
     }
 }
-
-
 function totalCookie() {
     var totalSum = 0;
     var cityArray = [Seattle, Tokyo, Paris, Dubai, Lima];
-    
+
     var tableBody = document.createElement('tbody');
     table.appendChild(tableBody);
     tableRow = document.createElement('tr');
@@ -116,12 +92,11 @@ function totalCookie() {
         totalCookiePerHoue.push(cityArray[0].numCookies[i] + cityArray[1].numCookies[i] + cityArray[2].numCookies[i] + cityArray[3].numCookies[i] + cityArray[4].numCookies[i]);
         tableData.textContent = totalCookiePerHoue[i];
     }
-
-    for (var index = 0; index < totalCookiePerHoue.length ; index++){
+    for (var index = 0; index < totalCookiePerHoue.length; index++) {
         totalSum = totalSum + totalCookiePerHoue[index];
     }
-    
-    
+
+
     console.log(totalCookiePerHoue[i]);
     var tableData = document.createElement('td');
     tableRow.appendChild(tableData);
@@ -135,18 +110,3 @@ cityRandNum(Dubai);
 cityRandNum(Lima);
 totalCookie();
 
-// function hourAndTotalCookie(city) {
-//     var title = document.getElementById('salmonCookies');
-//     var par = document.createElement('p');
-//     par.textContent = 'This is a list of orders per hour for ' + city.cityName + ' city';
-//     title.appendChild(par);
-//     var ulList = document.createElement('ul');
-//     par.appendChild(ulList);
-//     for (var i = 0; i < workingHour.length; i++) {
-//         var liList = document.createElement('li');
-//         ulList.appendChild(liList);
-//         var rand = Math.floor(randomNumOfCustPerHour(city.maxCust, city.minCust) * city.avgCookieSale);
-//         liList.textContent = rand;
-//     }
-// }
-// hourAndTotalCookie()
