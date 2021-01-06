@@ -2,4 +2,22 @@
 font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 font-style: italic;
 text-align: center;
+font-size: 25px;
+color: blanchedalmond;
+}
+.background-img {
+    background-image: url("https://i.pinimg.com/originals/7f/27/72/7f27723b145c8649d1e9c638c38b65f7.jpg");
+}
+.li {
+    color: rgb(251, 0, 0);
+    font-size: 25px;
+    font-weight:bold ;
+}
+.background-img2 {
+    background-image: url("https://i.pinimg.com/originals/7f/27/72/7f27723b145c8649d1e9c638c38b65f7.jpg");
+}
+
+.cookie-color {color: rgb(251, 0, 0);
+    font-size: 25px;
+    font-weight:bold ;
 }
