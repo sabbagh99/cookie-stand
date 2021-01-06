@@ -9,6 +9,7 @@ function AllCity(cityName, minCust, maxCust, avgCookieSale) {
     this.maxCust = maxCust;
     this.avgCookieSale = avgCookieSale;
     this.numCookies = [];
+    this.totalCookiePerHoue = 0;
 }
 var Seattle = new AllCity('Seattle', 23, 65, 6.3);
 
@@ -20,11 +21,33 @@ var Paris = new AllCity('Paris', 20, 38, 2.4);
 
 var Lima = new AllCity('Lima', 2, 16, 4.6);
 
+
+
+// AllCity.prototype.table = function (city) {
+//     var rowArray = [Hour, Seattle, Tokyo, Paris, Dubai, Lima, Total];
+//     var par = document.getElementById('salmonCookies');
+//     var table = document.createElement('table');
+//     par.appendChild(table);
+//     for (var i = 0; i < rowArray.length; i++) {
+//         var tableRow = document.createElement('tr');
+//         table.appendChild(tableRow);
+//         tableRow.textContent = city.rowArray[i];
+//     }
+//     for (var index = 0; index<workingHour,length; index++) {
+//         var tableData = document.createElement('td');
+//         tableRow.appendChild(tableData);
+//         tableData.textContent = city.workingHour[index];
+//     }
+
+// }
+var par = document.getElementById('salmonCookies');
+var table = document.createElement('table');
+par.appendChild(table);
+var tableBody = document.createElement('tbody');
+table.appendChild(tableBody);
+var tableRow = document.createElement('tr');
 function tableHead() {
     var titleHeadArray = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', 'Daily Location Total'];
-    var par = document.getElementById('salmonCookies');
-    var table = document.createElement('table');
-    par.appendChild(table);
     var titleHead = document.createElement('thead');
     table.appendChild(titleHead);
     var tableRow = document.createElement('tr');
@@ -52,24 +75,19 @@ fillArray(Dubai);
 fillArray(Paris);
 fillArray(Lima);
 
-var par = document.getElementById('salmonCookies');
-var table = document.createElement('table');
-par.appendChild(table);
-var tableBody = document.createElement('tbody');
-table.appendChild(tableBody);
-var tableRow = document.createElement('tr');
+
 function cityRandNum(city) {
     tableRow = document.createElement('tr');
     tableBody.appendChild(tableRow);
     var tableData = document.createElement('td');
     var sum = 0;
 
-    for (var index = 0; index < city.numCookies.length + 1; index++) {
+    for (var index = 0; index < city.numCookies.length + 2; index++) {
         tableData = document.createElement('td');
         tableRow.appendChild(tableData);
         tableData.textContent = Seattle;
-        var randValue = city.numCookies[index];
-        if(randValue){
+        var randValue = city.numCookies[index - 1];
+        if (randValue) {
             sum = sum + randValue;
             tableData.textContent = randValue;
         } else {
@@ -80,11 +98,12 @@ function cityRandNum(city) {
         }
     }
 }
+
+
 function totalCookie() {
+    var totalSum = 0;
     var cityArray = [Seattle, Tokyo, Paris, Dubai, Lima];
-    var par = document.getElementById('salmonCookies');
-    var table = document.createElement('table');
-    par.appendChild(table);
+    
     var tableBody = document.createElement('tbody');
     table.appendChild(tableBody);
     tableRow = document.createElement('tr');
@@ -97,6 +116,17 @@ function totalCookie() {
         totalCookiePerHoue.push(cityArray[0].numCookies[i] + cityArray[1].numCookies[i] + cityArray[2].numCookies[i] + cityArray[3].numCookies[i] + cityArray[4].numCookies[i]);
         tableData.textContent = totalCookiePerHoue[i];
     }
+
+    for (var index = 0; index < totalCookiePerHoue.length ; index++){
+        totalSum = totalSum + totalCookiePerHoue[index];
+    }
+    
+    
+    console.log(totalCookiePerHoue[i]);
+    var tableData = document.createElement('td');
+    tableRow.appendChild(tableData);
+    console.log(totalSum);
+    tableData.textContent = Number(totalSum);
 }
 cityRandNum(Seattle);
 cityRandNum(Tokyo);
@@ -119,3 +149,4 @@ totalCookie();
 //         liList.textContent = rand;
 //     }
 // }
+// hourAndTotalCookie()
