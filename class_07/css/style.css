@@ -14,20 +14,6 @@
         font-weight:bold ;
         margin: 25px;
     }
-    /* .styled-table {
-        border-collapse: collapse;
-        margin: 25px 0;
-        font-size: 0.9em;
-        font-family: sans-serif;
-        min-width: 400px;
-        box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
-        color: rgb(221, 206, 206);
-                font-weight:bold ;
-               
-    color: #ffffff;
-    text-align: left}
-
-    } */
     table, th, td, tr {
         border: 3px solid black;
         border-collapse: collapse;
