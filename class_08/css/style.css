@@ -3,12 +3,22 @@
     font-style: italic;
     text-align: center;
     font-size: 25px;
-    color: blanchedalmond;
+    color: rgb(0, 24, 240);
     }
+.par {
+    font-weight: bolder;
+    font-size: 30px;
+}
     .background-img {
+                background: url(https://raw.githubusercontent.com/LTUC/amman-201d12/main/class-08/lab-b/assets/family.jpg);
+                padding: 25px;
+                background-repeat: no-repeat;
+                background-size: cover;
+              }
+    
+    .background-img2 {
         background-image: url("https://i.pinimg.com/originals/7f/27/72/7f27723b145c8649d1e9c638c38b65f7.jpg");
     }
-    
     .li {
         color: rgb(251, 0, 0);
         font-size: 25px;
