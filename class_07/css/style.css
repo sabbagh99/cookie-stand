@@ -14,7 +14,7 @@
         font-weight:bold ;
         margin: 25px;
     }
-    .styled-table {
+    /* .styled-table {
         border-collapse: collapse;
         margin: 25px 0;
         font-size: 0.9em;
@@ -27,7 +27,7 @@
     color: #ffffff;
     text-align: left}
 
-    }
+    } */
     table, th, td, tr {
         border: 3px solid black;
         border-collapse: collapse;
