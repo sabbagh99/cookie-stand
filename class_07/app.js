@@ -12,15 +12,10 @@ function AllCity(cityName, minCust, maxCust, avgCookieSale) {
     this.totalCookiePerHoue = 0;
 }
 var Seattle = new AllCity('Seattle', 23, 65, 6.3);
-
 var Tokyo = new AllCity('Tokyo', 3, 24, 1.2);
-
 var Dubai = new AllCity('Dubai', 11, 38, 3.7);
-
 var Paris = new AllCity('Paris', 20, 38, 2.4);
-
 var Lima = new AllCity('Lima', 2, 16, 4.6);
-
 var par = document.getElementById('salmonCookies');
 var table = document.createElement('table');
 par.appendChild(table);
@@ -54,7 +49,6 @@ fillArray(Tokyo);
 fillArray(Dubai);
 fillArray(Paris);
 fillArray(Lima);
-
 function cityRandNum(city) {
     tableRow = document.createElement('tr');
     tableBody.appendChild(tableRow);
@@ -79,7 +73,6 @@ function cityRandNum(city) {
 function totalCookie() {
     var totalSum = 0;
     var cityArray = [Seattle, Tokyo, Paris, Dubai, Lima];
-
     var tableBody = document.createElement('tbody');
     table.appendChild(tableBody);
     tableRow = document.createElement('tr');
@@ -95,8 +88,6 @@ function totalCookie() {
     for (var index = 0; index < totalCookiePerHoue.length; index++) {
         totalSum = totalSum + totalCookiePerHoue[index];
     }
-
-
     console.log(totalCookiePerHoue[i]);
     var tableData = document.createElement('td');
     tableRow.appendChild(tableData);
@@ -109,4 +100,3 @@ cityRandNum(Paris);
 cityRandNum(Dubai);
 cityRandNum(Lima);
 totalCookie();
-
