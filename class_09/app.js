@@ -148,8 +148,6 @@ for (let i = 0; i < cityArray.length; i++) {
     cityRandNum(cityArray[i]);
 }
 totalCookie();
-
-
 function updateGrandTotal(valueToAdd, td) {
     td.textContent = Number(valueToAdd) + Number(td.innerHTML);
 
