@@ -90,6 +90,8 @@ function addBranch(newData) {
         var rand = Math.floor(randomNumOfCustPerHour(newData.maxCust, newData.minCust) * newData.avgCookieSale);
         totalNewBranch = totalNewBranch + rand;
         tableData.textContent = rand;
+        updateGrandTotal(rand, tempRow.cells[i+1]);
+
     }
     updateGrandTotal(totalNewBranch, tempRow.cells[15]);
     table.appendChild(tempRow);
@@ -124,7 +126,6 @@ function totalCookie() {
         totalCookiePerHoue.push(cityArray[0].numCookies[i] + cityArray[1].numCookies[i] + cityArray[2].numCookies[i] + cityArray[3].numCookies[i] + cityArray[4].numCookies[i]);
         tableData.textContent = totalCookiePerHoue[i];
     }
-    // updateGrandTotal(totalCookiePerHoue[i],)
     for (var index = 0; index < totalCookiePerHoue.length; index++) {
         totalSum = totalSum + totalCookiePerHoue[index];
     }
@@ -138,5 +139,4 @@ for (let i = 0; i < cityArray.length; i++) {
 totalCookie();
 function updateGrandTotal(valueToAdd, td) {
     td.textContent = Number(valueToAdd) + Number(td.innerHTML);
-
 }
