@@ -27,7 +27,6 @@ par.appendChild(table);
 var tableBody = document.createElement('tbody');
 table.appendChild(tableBody);
 var tableRow = document.createElement('tr');
-
 function tableHead() {
     var titleHeadArray = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', 'Daily Location Total'];
     var titleHead = document.createElement('thead');
@@ -43,7 +42,6 @@ function tableHead() {
         tableHead.textContent = titleHeadArray[index];
     }
 }
-
 tableHead();
 
 function fillArray(location) {
@@ -52,7 +50,6 @@ function fillArray(location) {
         location.numCookies.push(rand);
     }
 }
-
 for (let index = 0; index < cityArray.length; index++) {
     fillArray(cityArray[index]);
 }
@@ -77,24 +74,19 @@ function cityRandNum(city) {
         }
     }
 }
-
-
 function addBranch(newData) {
     var totalNewBranch = 0;  
     var tempRow = document.getElementById('totalRow');
     tempRow.remove();
-
     form.appendChild(table);
     tableRow = document.createElement('tr');
     table.appendChild(tableRow);
-
     var tableData = document.createElement('td');
     tableRow.appendChild(tableData);
     tableData.textContent = newData.cityName;
     for (let i = 0; i < workingHour.length; i++) {
         tableData = document.createElement('td');
         tableRow.appendChild(tableData);
-
         var rand = Math.floor(randomNumOfCustPerHour(newData.maxCust, newData.minCust) * newData.avgCookieSale);
         totalNewBranch = totalNewBranch + rand;
         tableData.textContent = rand;
@@ -105,20 +97,16 @@ function addBranch(newData) {
     tableRow.appendChild(tableData);
     tableData.textContent = totalNewBranch;
 }
-
 function newInfo(event) {
     event.preventDefault();
     var cityName = event.target.name.value;
     var minCust = parseInt(event.target.minNumber.value);
     var maxCust = parseInt(event.target.maxNumber.value);
     var avgCookieSale = parseInt(event.target.avgNumber.value);
-
-
     var addNewBranch = new AllCity(cityName, minCust, maxCust, avgCookieSale);
     addBranch(addNewBranch);
 }
 form.addEventListener('submit', newInfo);
-
 function totalCookie() {
     var totalSum = 0;
     var tableBody = document.createElement('tbody');
@@ -148,8 +136,6 @@ for (let i = 0; i < cityArray.length; i++) {
     cityRandNum(cityArray[i]);
 }
 totalCookie();
-
-
 function updateGrandTotal(valueToAdd, td) {
     td.textContent = Number(valueToAdd) + Number(td.innerHTML);
 
