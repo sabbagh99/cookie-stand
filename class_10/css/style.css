@@ -1,0 +1,65 @@
+.text {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-style: italic;
+    text-align: center;
+    font-size: 25px;
+    color: rgb(0, 24, 240);
+    font-family: 'East Sea Dokdo', cursive;
+font-family: 'Zilla Slab Highlight', cursive;
+font-weight: bold;
+    }
+.par {
+    font-weight: bolder;
+    font-size: 30px;
+    font-family: 'East Sea Dokdo', cursive;
+font-family: 'Zilla Slab Highlight', cursive;
+font-weight: bold;
+}
+    .background-img {
+                background: url(https://raw.githubusercontent.com/LTUC/amman-201d12/main/class-08/lab-b/assets/family.jpg);
+                padding: 25px;
+                background-repeat: no-repeat;
+                background-size: cover;
+              }
+    .background-img2 {
+        background-image: url("https://raw.githubusercontent.com/LTUC/amman-201d12/main/class-08/lab-b/assets/fish.jpg");
+        background-repeat: space;
+    }
+    .li {
+        color: rgb(0, 0, 0);
+        font-size: 25px;
+        font-weight:bold ;
+        margin: 25px;
+        font-family: 'East Sea Dokdo', cursive;
+font-family: 'Zilla Slab Highlight', cursive;
+font-weight: bold;
+background-color: white;
+    }
+       table{
+        margin: 250px 0;
+        background-color: white;
+       }
+    th, td, tr{
+        border: 3px solid black;
+        font-family: sans-serif;
+        color: rgb(255, 0, 0);
+        padding: 22px;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius:50%;
+        margin-left: auto;
+        margin-right: auto; 
+        font-weight:bolder ;
+        text-align: center; 
+         min-width: 50px; 
+         font-size: 12px;
+      }
+    .logo {
+        text-align: center; 
+        color: rgb(0, 0, 0);
+        font-size: 50px;
+        font-family: 'East Sea Dokdo', cursive;
+font-family: 'Zilla Slab Highlight', cursive;
+font-weight: bold;
+
+    }
